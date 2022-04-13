@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: ORDER-SERVICE
+
+  datasource:
+    url: jdbc:h2:mem:orderservice
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+
+server:
+  port : 8081
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+  instance:
+    hostname: localhost
+
